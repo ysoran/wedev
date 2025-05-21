@@ -1,5 +1,7 @@
 # Alma Lead Management App
 
+https://github.com/user-attachments/assets/c64c9896-5f1e-4162-9f4c-133f804819c8
+
 This project is a Next.js application designed for managing leads. It features a public-facing form for lead submission and a secure admin dashboard for viewing and managing submitted leads.
 
 ## Getting Started
