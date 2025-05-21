@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alma Lead Management App
+
+This project is a Next.js application designed for managing leads. It features a public-facing form for lead submission and a secure admin dashboard for viewing and managing submitted leads.
 
 ## Getting Started
 
-First, run the development server:
+To run the application in development mode:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1.  **Install Dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    # or
+    bun install
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.  **Run the Development Server:**
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    # or
+    bun dev
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The application will start on `http://localhost:3000`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Accessing the Application
+
+* **Public Lead Submission Form:**
+    Open [http://localhost:3000](http://localhost:3000) in your browser. This is where potential leads can submit their information.
+
+* **Admin Dashboard:**
+    Access the admin dashboard via [http://localhost:3000/login](http://localhost:3000/login). You will need to sign up or log in to view and manage leads.
+
+## Project Structure Highlights
+
+* `app/page.tsx`: The main public-facing lead submission form.
+* `app/leads/page.tsx`: The secure admin dashboard for viewing leads.
+* `app/login/page.tsx`: The login page for administrative access.
+* `app/signup/page.tsx`: The signup page for creating new admin accounts.
+* `app/api/leads/route.ts`: API endpoint for handling lead submissions and fetching leads.
+* `app/api/login/route.ts`: API endpoint for user authentication.
+* `app/api/signup/route.ts`: API endpoint for new user registration.
+* `data/leads.json`: (Automatically created) Stores submitted lead data.
+* `data/users.json`: (Automatically created) Stores user account data.
+* `store/leadStore.ts`: Zustand store for managing lead data on the client-side.
+* `hooks/useAuthRedirect.ts`: Custom hook for handling authentication redirection.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this project, refer to the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+* [Zustand Documentation](https://docs.pmnd.rs/zustand/getting-started/introduction) - a small, fast, and scalable bearbones state-management solution.
+* [React Hook Form Documentation](https://react-hook-form.com/get-started) - performant, flexible, and extensible forms with easy-to-use validation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
+## Deployment
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For more details, refer to the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
